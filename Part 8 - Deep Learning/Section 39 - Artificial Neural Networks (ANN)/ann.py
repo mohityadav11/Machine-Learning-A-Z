@@ -46,6 +46,12 @@ classifier = Sequential()
 #Adding Input Layer and First Hidden Layer
 classifier.add(Dense(activation="relu", input_dim=11, units=6, kernel_initializer="uniform"))
 
+#Adding Second Hidden Layer
+classifier.add(Dense(activation="relu", units=6, kernel_initializer="uniform"))
+
+#Adding the Output Layer
+classifier.add(Dense(activation="sigmoid", units=1, kernel_initializer="uniform"))
+
 
 # Predicting the Test set results
 y_pred = classifier.predict(X_test)
