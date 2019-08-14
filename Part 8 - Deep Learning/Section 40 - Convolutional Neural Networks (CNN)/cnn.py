@@ -16,3 +16,5 @@ from keras.layers import Dense
 classifier = Sequential()
 
 #Step - 1 Convolution
+classifier.add(Convolution2D(filters = 32 , kernel_size = (3 ,3), data_format='channels_last', input_shape=(64, 64, 3), activation = 'relu'))
+
