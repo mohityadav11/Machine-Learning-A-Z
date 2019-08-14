@@ -54,8 +54,10 @@ test_set = test_datagen.flow_from_directory(
                                             batch_size=32,
                                             class_mode='binary')
 
+#steps_per_epoch = steps_samples_per_epoch/batch_size which is 8000/32 and 2000/32
+
 classifier.fit_generator(training_set,
-                        steps_per_epoch=2000,
+                        steps_per_epoch=250,
                         epochs=25,
                         validation_data=test_set,
                         validation_steps=2000) 
