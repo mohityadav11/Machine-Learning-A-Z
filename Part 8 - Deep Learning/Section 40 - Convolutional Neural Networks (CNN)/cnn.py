@@ -21,6 +21,10 @@ classifier.add(Convolution2D(filters = 32 , kernel_size = (3 ,3), data_format='c
 # Step - 2 Pooling
 classifier.add(MaxPooling2D(pool_size=(2,2)))
 
+# Adding a Second Convolutional Layer
+classifier.add(Convolution2D(filters = 32 , kernel_size = (3 ,3), activation = 'relu'))
+classifier.add(MaxPooling2D(pool_size=(2,2)))
+
 # Step - 3 Flattening
 classifier.add(Flatten())
 
